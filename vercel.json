@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/", "destination": "/public/index.html" }
+  ],
+  "functions": {
+    "api/info.js": { "maxDuration": 30 },
+    "api/download.js": { "maxDuration": 30 }
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" }
+      ]
+    }
+  ]
+}
