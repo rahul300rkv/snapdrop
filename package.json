@@ -2,10 +2,7 @@
   "name": "snapdrop",
   "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@distube/ytdl-core": "^4.14.4",
-    "node-fetch": "^2.7.0"
-  },
+  "type": "module",
   "engines": {
     "node": "24.x"
   }
