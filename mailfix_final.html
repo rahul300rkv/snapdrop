@@ -862,7 +862,7 @@
           'Authorization': 'Bearer ' + GROQ_KEY
         },
         body: JSON.stringify({
-          model: 'llama3-8b-8192',
+          model: 'llama3.1-8b-instant',
           messages: [{ role: 'user', content: prompt }],
           max_tokens: 400,
           temperature: 0.6
