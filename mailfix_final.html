@@ -767,7 +767,7 @@
 <footer>
   <span>© 2025 MailFix — Free AI Email Tool</span>
   <div style="display:flex;gap:20px">
-    <a href="#">Privacy Policy</a>
+    <a href="privacy.html">Privacy Policy</a>
     <a href="#">Terms</a>
     <a href="#">Contact</a>
   </div>
@@ -784,7 +784,7 @@
   let selectedTone = 'Professional';
   let lastInput = '';
   let usageCount = parseInt(localStorage.getItem('mf_usage') || '0');
-  const DAILY_LIMIT = 5;
+  const DAILY_LIMIT = 10;
 
   function loadExample(key) {
     document.getElementById('inputText').value = EXAMPLES[key];
@@ -832,7 +832,7 @@
     if (input.length < 10) { showError('Thoda aur detail do, kam se kam 10 characters.'); return; }
 
     if (!checkLimit()) {
-      showError('Aaj ke 5 free uses ho gaye. Kal wapas aao — ya ad dekhke unlock karo!');
+      showError('Aaj ke 10 free uses ho gaye. Kal wapas aao!');
       return;
     }
 
@@ -850,7 +850,7 @@
     output.innerHTML = '';
     actions.style.display = 'none';
 
-    const GROQ_KEY = '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';
+    const GROQ_KEY = 'PASTE_YOUR_GROQ_KEY_HERE';
 
     const prompt = `You are a professional email writing assistant for Indian users. Convert the following Hinglish message (mix of Hindi and English) into a clean, polished, ${selectedTone.toLowerCase()} professional English email. Include a Subject line at the top. Output ONLY the email, nothing else.\n\nHinglish message: "${input}"\n\nProfessional email:`;
 
